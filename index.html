@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Job Planner Application</title>
+    <!-- Include Tailwind CSS styles -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Links to both pages -->
+    <div class="text-center my-4">
+        <a href="index.html" class="text-blue-500 hover:underline">Home</a>
+        |
+        <a href="auth/auth.html" class="text-blue-500 hover:underline">Authentication</a>
+    </div>
+
+    <form class="bg-white p-4 rounded-lg shadow-lg max-w-md mx-auto mt-8">
+
+        <!-- Logo and Title -->
+        <div class="flex items-center mb-6">
+            <img src="./ACAB logo.svg" alt="Company Logo" class="w-13 h-12 mr-2">
+            <h1 class="text-2xl font-semibold">ACAB Job Planner</h1>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-4">
+            <label for="search" class="block">Search:</label>
+            <input type="text" id="search" name="search" placeholder="Search jobs..."
+                class="w-full border border-gray-300 p-2 rounded">
+        </div>
+
+        <fieldset class="border border-gray-300 rounded-lg p-4 mb-4">
+            <legend class="font-bold">Job Details</legend>
+
+            <!-- Job Details Fields -->
+            <div class="mb-4">
+                <label for="jobName" class="block">Job Name</label>
+                <input type="text" id="jobName" name="jobName" class="w-full border border-gray-300 p-2 rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="repName" class="block">Rep Name</label>
+                <select id="repName" name="repName" class="w-full border border-gray-300 p-2 rounded">
+                    <option value="Carolyn">Carolyn</option>
+                    <option value="Narelle">Narelle</option>
+                    <option value="Darren">Darren</option>
+                    <option value="Joe">Joe</option>
+                    <option value="Jess">Jess</option>
+                    <option value="Amanda">Amanda</option>
+                    <option value="Hazel">Hazel</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="location" class="block">Location</label>
+                <input type="text" id="location" name="location" class="w-full border border-gray-300 p-2 rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="date" class="block">Date</label>
+                <input type="text" id="date" name="date" class="w-full border border-gray-300 p-2 rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="jobType" class="block">Job Type</label>
+                <select id="jobType" name="jobType" class="w-full border border-gray-300 p-2 rounded">
+                    <option value="Roller Blind">Roller Blind</option>
+                    <option value="Cassette Blind">Cassette Blind</option>
+                    <option value="Roman Blind">Roman Blind</option>
+                    <option value="Track">Track</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="numItems" class="block">Number of Items</label>
+                <input type="number" id="numItems" name="numItems" class="w-full border border-gray-300 p-2 rounded">
+            </div>
+
+            <div class="mb-4">
+                <label for="jobDescription" class="block">Job Description</label>
+                <input type="text" id="jobDescription" name="jobDescription"
+                    class="w-full border border-gray-300 p-2 rounded">
+            </div>
+        </fieldset>
+
+        <fieldset class="border border-gray-300 rounded-lg p-4 mb-4">
+            <legend class="font-bold">Status</legend>
+
+            <!-- Status Fields -->
+            <div class="mb-4">
+                <label for="jobStatus" class="block">Status</label>
+                <select id="jobStatus" name="jobStatus" class="w-full border border-gray-300 p-2 rounded">
+                    <option value="Green">Green</option>
+                    <option value="Yellow">Yellow</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                </select>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Submit Job
+        </button>
+
+        <button onclick="window.location.href = 'auth/auth.html';"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Go to Auth Page
+        </button>
+    </form>
+
+    <!-- Include your Firebase initialization script -->
+    <script src="./firebase.js"></script>
+
+</body>
+
+</html>
